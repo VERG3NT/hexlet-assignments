@@ -5,8 +5,7 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.stream.Collectors;
-import java.lang.reflect.Field;
-// BEGIN
+
 class Validator {
     public static List<String> validate(Object instance) {
         List<Field> fields = List.of(instance.getClass().getDeclaredFields());
@@ -66,5 +65,3 @@ class Validator {
         return errors;
     }
 }
-}
-// END
