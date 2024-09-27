@@ -28,7 +28,6 @@ class Validator {
                 .collect(Collectors.toList());
     }
 
-}
 
     public static Map<String, List<String>> advancedValidate(Object instance) {
         List<Field> fields = List.of(instance.getClass().getDeclaredFields());
@@ -68,5 +67,5 @@ class Validator {
         }
         return errors;
     }
-
+}
 // END

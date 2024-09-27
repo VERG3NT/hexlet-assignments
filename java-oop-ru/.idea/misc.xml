@@ -5,6 +5,7 @@
     <file type="web" url="file://$PROJECT_DIR$/classes-and-objects" />
     <file type="web" url="file://$PROJECT_DIR$/interfaces" />
     <file type="web" url="file://$PROJECT_DIR$/patterns" />
+    <file type="web" url="file://$PROJECT_DIR$/reflections" />
     <file type="web" url="file://$PROJECT_DIR$/subtyping" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="openjdk-21" project-jdk-type="JavaSDK" />
