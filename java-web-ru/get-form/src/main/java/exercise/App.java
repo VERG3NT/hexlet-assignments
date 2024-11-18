@@ -25,21 +25,19 @@ public final class App {
         app.get("/users", ctx -> {
             var term = ctx.queryParam("term");
             List<User> users;
-            if (term == null) {
-                users = USERS;
-            } else {
-                users = USERS
-                        .stream()
-                        .filter(u -> {
-                            return StringUtils.startsWithIgnoreCase(u.getFirstName(), term);
-                        })
-                        .toList();
-            }
 
+            if (term == null){
+                users = USERS;
+            }
+            else {
+            users = USERS.stream().filter(c -> {
+                return StringUtils.startsWithIgnoreCase(c.getFirstName(), term);
+            }).toList();
+            }
             var page = new UsersPage(users, term);
             ctx.render("users/index.jte", model("page", page));
-
         });
+
         // END
 
         app.get("/", ctx -> {
