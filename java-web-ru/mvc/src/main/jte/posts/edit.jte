@@ -31,3 +31,4 @@ content = @`
         </form>
     </div>
 `
+)
