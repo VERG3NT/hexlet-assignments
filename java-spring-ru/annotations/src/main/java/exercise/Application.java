@@ -8,10 +8,15 @@ public class Application {
     public static void main(String[] args) {
         var address = new Address("London", 12345678);
 
-        // BEGIN
-        for (Method method : Address.class.getDeclaredMethods()){
-            if (method.isAnnotationPresent(Inspect.class)){
-                System.out.printf("Method %s returns a value of type %s", method.getName(), method.getAnnotatedReturnType());
+        for (Method method : address.getClass().getDeclaredMethods()) {
+
+            if (method.isAnnotationPresent(Inspect.class)) {
+
+                System.out.println("Method "
+                        + method.getName()
+                        + " returns a value of type "
+                        + method.getReturnType().getSimpleName()
+                );
             }
         }
         // END
