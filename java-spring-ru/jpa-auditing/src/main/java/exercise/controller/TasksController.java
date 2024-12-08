@@ -40,9 +40,11 @@ public class TasksController {
     }
 
     // BEGIN
+
     @PostMapping(path = "")
-    public Task create(@RequestBody Task body) {
-        return taskRepository.save(body);
+    @ResponseStatus(HttpStatus.CREATED)
+    public Task create(@RequestBody Task task) {
+        return taskRepository.save(task);
     }
 
     @PutMapping(path = "/{id}")

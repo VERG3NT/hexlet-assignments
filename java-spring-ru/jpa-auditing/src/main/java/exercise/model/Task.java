@@ -14,21 +14,24 @@ import java.time.LocalDate;
 
 // BEGIN
 @Entity
+@Table(name = "tasks")
 @EntityListeners(AuditingEntityListener.class)
 @Getter
 @Setter
 public class Task {
+
     @Id
     @GeneratedValue(strategy = IDENTITY)
     private long id;
 
     private String title;
-    private String description;
 
-    @CreatedDate
-    private LocalDate createdAt;
+    private String description;
 
     @LastModifiedDate
     private LocalDate updatedAt;
+
+    @CreatedDate
+    private LocalDate createdAt;
 }
 // END
