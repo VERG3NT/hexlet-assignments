@@ -4,8 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 // BEGIN
-@Getter
 @Setter
+@Getter
 public class ProductUpdateDTO {
     private String title;
     private int price;
